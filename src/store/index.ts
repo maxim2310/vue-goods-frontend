@@ -2,6 +2,7 @@ import { Good } from "@/types/Good";
 import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
+import api from "@/helpers/api";
 
 Vue.use(Vuex);
 
@@ -32,9 +33,8 @@ export default new Vuex.Store<GoodState>({
     async fetchGoods({ commit }) {
       commit("setLoading", true);
       try {
-        const response = await axios.get(
-          "https://vue-goods-service.onrender.com/goods"
-        );
+        const response = await api.get("/goods");
+        console.log(response.data);
         commit("setGoods", response.data);
         commit("setError", null);
       } catch (err) {
