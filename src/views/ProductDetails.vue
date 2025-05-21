@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-btn icon @click="$router.back()">
+    <v-btn icon @click="$router.back()" class="mb-4">
       <v-icon>mdi-arrow-left</v-icon>
     </v-btn>
 

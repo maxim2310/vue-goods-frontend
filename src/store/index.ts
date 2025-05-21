@@ -32,7 +32,9 @@ export default new Vuex.Store<GoodState>({
     async fetchGoods({ commit }) {
       commit("setLoading", true);
       try {
-        const response = await axios.get("http://localhost:3000/goods");
+        const response = await axios.get(
+          "https://vue-goods-service.onrender.com/goods"
+        );
         commit("setGoods", response.data);
         commit("setError", null);
       } catch (err) {

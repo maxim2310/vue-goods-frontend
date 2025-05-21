@@ -3,8 +3,8 @@
     <v-img :src="good.imageUrl" height="200px" />
     <v-card-title>{{ good.name }}</v-card-title>
     <v-card-text>
-      <div>Price: ${{ good.price.toFixed(2) }}</div>
-      <div class="text--secondary">{{ good.category }}</div>
+      <div class="text--secondary">Category: {{ good.category }}</div>
+      <div class="text-h6">Price: ${{ good.price.toFixed(2) }}</div>
     </v-card-text>
     <v-card-actions>
       <v-btn text small color="primary">View Details</v-btn>
